@@ -60,6 +60,7 @@ const config: Config = {
       {
         hashed: true,
         indexPages: true,
+        indexBlog: false,
       },
     ],
   ],
