@@ -30,3 +30,8 @@
 - Homepage visuals are driven by `src/pages/index.tsx` and
   `src/components/HomepageFeatures/index.tsx`.
 - Global theming tweaks go in `src/css/custom.css`.
+
+## Patch path safety (Windows)
+- For `apply_patch`, always use workspace-relative paths (for example `package.json`), never absolute Windows paths like `D:\thegioitienhiep\package.json`.
+- Do not include drive letters (`D:`) in `*** Update File:`, `*** Add File:`, or `*** Delete File:` headers.
+- If a tool returns an absolute path, convert it to a repo-relative path before building the patch header.
